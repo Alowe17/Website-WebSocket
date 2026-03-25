@@ -2,6 +2,7 @@ package com.example.webSocket.config;
 
 import com.example.webSocket.handler.AuthWebSocketHandler;
 import com.example.webSocket.handler.ChatHandshakeIntercopter;
+import com.example.webSocket.service.ChatMessageService;
 import com.example.webSocket.service.ChatService;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
@@ -12,9 +13,11 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 @EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer {
     private final ChatService chatService;
+    private final ChatMessageService chatMessageService;
 
-    public WebSocketConfig (ChatService chatService) {
+    public WebSocketConfig (ChatService chatService, ChatMessageService chatMessageService) {
         this.chatService = chatService;
+        this.chatMessageService = chatMessageService;
     }
     @Override
     public void registerWebSocketHandlers (WebSocketHandlerRegistry registry) {
@@ -24,6 +27,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
     }
 
     private AuthWebSocketHandler authWebSocketHandler() {
-        return new AuthWebSocketHandler(chatService);
+        return new AuthWebSocketHandler(chatService, chatMessageService);
     }
 }
