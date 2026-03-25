@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 @Table(name = "chats")
 public class Chat {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String uuid;
 
     private String ownerUsername;
