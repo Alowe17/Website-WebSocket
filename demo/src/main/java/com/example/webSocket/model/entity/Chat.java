@@ -1,4 +1,4 @@
-package com.example.webSocket.model;
+package com.example.webSocket.model.entity;
 
 import jakarta.persistence.*;
 

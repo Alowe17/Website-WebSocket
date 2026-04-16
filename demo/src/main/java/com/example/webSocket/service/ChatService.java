@@ -1,6 +1,6 @@
 package com.example.webSocket.service;
 
-import com.example.webSocket.model.Chat;
+import com.example.webSocket.model.entity.Chat;
 import com.example.webSocket.repository.ChatRepository;
 import org.springframework.stereotype.Service;
 
