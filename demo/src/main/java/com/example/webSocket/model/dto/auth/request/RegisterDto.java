@@ -1,4 +1,4 @@
-package com.example.webSocket.model.dto.login.request;
+package com.example.webSocket.model.dto.auth.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginDto {
+public class RegisterDto {
     private String username;
     private String password;
 }

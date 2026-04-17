@@ -1,7 +1,7 @@
 package com.example.webSocket.controller.auth;
 
 import com.example.webSocket.config.jwt.JwtUtil;
-import com.example.webSocket.model.dto.login.request.LoginDto;
+import com.example.webSocket.model.dto.auth.request.LoginDto;
 import com.example.webSocket.model.entity.RefreshToken;
 import com.example.webSocket.service.RefreshTokenService;
 import com.example.webSocket.service.UserService;

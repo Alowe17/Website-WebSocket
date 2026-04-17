@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+    <form id="login-form">
+        <label>Введите никнейм: </label>
+        <input type="text" id="login">
 
+        <label>Введите пароль: </label>
+        <input type="password" id="password">
+
+        <button>Войти</button>
+    </form>
+    <div id="container-error"></div>
+
+    <script th:src="@{/js/login.js}"></script>
 </body>
 </html>
